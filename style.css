@@ -1,0 +1,555 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #f7f9fd;
+  }
+  .wrapper {
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
+  }
+  .container {
+    width: 100%;
+  }
+  .sub-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  .flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper h3 {
+    color: #363d55;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+  }
+  .container input {
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+  }
+  .container input:focus {
+    border-color: #587ef4;
+  }
+  .total-amount-container,
+  .user-amount-container {
+    background-color: #ffffff;
+    padding: 1.25em 0.9em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  }
+  .output-container {
+    background-color: #587ef4;
+    color: #ffffff;
+    border-radius: 0.3em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    margin: 2em 0;
+    padding: 1.2em;
+  }
+  .output-container p {
+    font-weight: 500;
+    margin-bottom: 0.6em;
+  }
+  .output-container span {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #e5e5e5;
+  }
+  .submit {
+    font-size: 1em;
+    margin-top: 0.8em;
+    background-color: #587ef4;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0.6em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+  .list {
+    background-color: #ffffff;
+    padding: 1.8em 1.2em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    border-radius: 0.6em;
+  }
+  .sublist-content {
+    width: 100%;
+    border-left: 0.3em solid #587ef4;
+    margin-bottom: 0.6em;
+    padding: 0.5em 1em;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+  }
+  .product {
+    font-weight: 500;
+    color: #363d55;
+  }
+  .amount {
+    color: #414a67;
+    margin-left: 20%;
+  }
+  .icons-container {
+    width: 5em;
+    margin: 1.2em;
+    align-items: center;
+  }
+  .product-title {
+    margin-bottom: 1em;
+  }
+  .hide {
+    display: none;
+  }
+  .error {
+    color: #ff465a;
+  }
+  .edit {
+    margin-left: auto;
+  }
+  .edit,
+  .delete {
+    background: transparent;
+    cursor: pointer;
+    margin-right: 1.5em;
+    border: none;
+    color: #587ef4;
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      font-size: 14px;
+    }
+    .sub-container {
+      grid-template-columns: 1fr;
+      gap: 1em;
+    }
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #f7f9fd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar {
+    background-color: #587ef4;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 43.75em;
+    margin: 0 auto;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-toggle {
+    cursor: pointer;
+  }
+  
+  body.light-mode {
+    background-color: #f7f9fd;
+    color: #414a67;
+  }
+  
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .wrapper {
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
+  }
+  
+  /* Rest of your existing CSS styles */
+  /* ... */
+
+/* Common styles for both light and dark themes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 43.75em;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+
+/* Light theme */
+body.light-mode {
+  background-color: #f7f9fd;
+  color: #414a67;
+}
+
+.light-mode .navbar {
+  background-color: #587ef4;
+  color: #fff;
+}
+
+/* Dark theme */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode .navbar {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+/* Common styles for both light and dark themes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: #587ef4;
+  color: #fff;
+  padding: 1em;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 43.75em;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+
+/* Light theme */
+body.light-mode {
+  background-color: #f7f9fd;
+  color: #414a67;
+}
+
+.light-mode .total-amount-container,
+.light-mode .user-amount-container,
+.light-mode .output-container,
+.light-mode .list,
+.light-mode .list-container {
+  background-color: #ffffff;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+/* Dark theme */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark-mode .total-amount-container,
+.dark-mode .user-amount-container,
+.dark-mode .output-container,
+.dark-mode .list,
+.dark-mode .list-container {
+  background-color: #2b2b2b;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+/* Rest of your existing styles */
+/* ... */
+/* Common styles for both light and dark themes */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 43.75em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+
+/* Light theme */
+body.light-mode {
+  background-color: #f7f9fd;
+  color: #414a67;
+}
+
+.light-mode .navbar {
+  background-color: #587ef4;
+  color: #fff;
+}
+
+.light-mode .total-amount-container,
+.light-mode .user-amount-container,
+.light-mode .output-container,
+.light-mode .list,
+.light-mode .list-container {
+  background-color: #ffffff;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+.light-mode input,
+.light-mode button {
+  background-color: #587ef4;
+  color: #fff;
+  border: none;
+}
+
+.light-mode .total-amount,
+.light-mode .expenditure-value,
+.light-mode .balance-value {
+  color: #363d55;
+}
+
+.light-mode .description {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin-bottom: 1em;
+}
+
+/* Dark theme */
+body.dark-mode {
+  background-color: #272727;
+  color: #fff;
+}
+
+.dark-mode .navbar {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode .total-amount-container,
+.dark-mode .user-amount-container,
+.dark-mode .output-container,
+.dark-mode .list,
+.dark-mode .list-container {
+  background-color: #2c2c2c;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #4d4d4d;
+  color: #fff;
+  border: none;
+}
+
+.dark-mode .total-amount,
+.dark-mode .expenditure-value,
+.dark-mode .balance-value {
+  color: #a5a5a5;
+}
+
+.dark-mode .description {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin-bottom: 1em;
+}
+/* ... (previous styles) ... */
+/* 
+/* Light theme */
+ body.light-mode {
+  background-color: #f7f9fd;
+  color: #414a67;
+}
+
+.light-mode .navbar {
+  background-color: #587ef4;
+  color: #fff;
+}
+
+.light-mode .total-amount-container,
+.light-mode .user-amount-container,
+.light-mode .output-container,
+.light-mode .list,
+.light-mode .list-container {
+  background-color: #ffffff;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  color: #363d55; /* Set text color for better visibility */
+}
+
+.light-mode input,
+.light-mode button {
+  background-color: #587ef4;
+  color: #fff;
+  border: none;
+}
+
+.light-mode .total-amount,
+.light-mode .expenditure-value,
+.light-mode .balance-value {
+  color: #363d55;
+}
+
+.light-mode .description {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin-bottom: 1em;
+  margin-top: 1em;
+  color: #414a67;
+}
+
+/* Dark theme */
+body.dark-mode {
+  background-color: #272727;
+  color: #fff;
+}
+
+.dark-mode .navbar {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode .total-amount-container,
+.dark-mode .user-amount-container,
+.dark-mode .output-container,
+.dark-mode .list,
+.dark-mode .list-container {
+  background-color: #2c2c2c;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  color: #a5a5a5; /* Set text color for better visibility */
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #4d4d4d;
+  color: #fff;
+  border: none;
+}
+
+.dark-mode .total-amount,
+.dark-mode .expenditure-value,
+.dark-mode .balance-value {
+  color: #a5a5a5;
+}
+
+.dark-mode .description {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin-bottom: 1em;
+  margin-top: 1em;
+} */
+
+/* ... (rest of your existing styles) ... */
+
+
+
+/* Rest of your existing styles */
+/* ... */
